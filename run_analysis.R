@@ -8,6 +8,7 @@
 
 library(dplyr)
 
+setwd("C:/Users/ee60700/Documents/Coursera/Getting and Cleaning Data")
 
 ##Data below applies to both Training and Test sets. You can replace the following code with your own file location: C:/Users/ee60700/Documents/Coursera/Getting and Cleaning Data
 Activity_Labels <- read.table("C:/Users/ee60700/Documents/Coursera/Getting and Cleaning Data/UCI HAR Dataset/activity_labels.txt", col.names = c("Activity_Code","Activity_Name"))
