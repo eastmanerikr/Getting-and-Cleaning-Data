@@ -1,6 +1,18 @@
 # Getting-and-Cleaning-Data
 ## Course Project
 
+I've included the relevant files in the repo as well as the original README below to show the origin of the data. You will find:
+
+run_analysis.R - Reads in multiple files to create a tidy dataset. Then outputs the average for selected Feature variables.
+
+features.txt - Lists every feature in the data set. Only selected features to average for this exercise contains "mean()" or "std()"
+
+features_info.txt - Contains more information about each feature.
+
+Average_Final_Output.txt - The final output of the code/exercise.
+
+
+Below is the original README file as to the origin of the data.
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
