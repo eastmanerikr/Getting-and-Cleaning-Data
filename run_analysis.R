@@ -9,7 +9,7 @@
 library(dplyr)
 
 
-##Data below applies to both Training and Test sets. 
+##Data below applies to both Training and Test sets. You can replace the following code with your own file location: C:/Users/ee60700/Documents/Coursera/Getting and Cleaning Data
 Activity_Labels <- read.table("C:/Users/ee60700/Documents/Coursera/Getting and Cleaning Data/UCI HAR Dataset/activity_labels.txt", col.names = c("Activity_Code","Activity_Name"))
 Features <- read.table("C:/Users/ee60700/Documents/Coursera/Getting and Cleaning Data/UCI HAR Dataset/features.txt", col.names = c("Feature_Code","Feature_Name"))
 
