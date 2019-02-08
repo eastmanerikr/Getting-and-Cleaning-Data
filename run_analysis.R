@@ -42,7 +42,8 @@ Full_Data_Set <- rbind.data.frame(Full_Train_Set, Full_Test_Set)
 
 ##Extract Mean and SD for each Measurement. Selected Features must contain the word mean() or std()
 
-Mean_SD_Data_Set <- Full_Data_Set %>% select(Subject_Number, Subject_Data_Set, Activity_Name, contains("mean"), contains("std"))
+Mean_SD_Data_Set <- Full_Data_Set %>% select(Subject_Number, Subject_Data_Set, Activity_Name, contains("mean"), contains("std"), -contains("Freq"), -contains("angle"))
+
 
 ##Create the data set described in step 5. The mean for each Feature (Mean & SD Only outlined in Steps 1-4) 
 ##Adds the word "mean" after each Feature Name for the column headers.
@@ -51,5 +52,5 @@ Averages_Data_Set <- Mean_SD_Data_Set %>% select(-Subject_Data_Set) %>%
                      group_by(Subject_Number, Activity_Name) %>%
                      dplyr::summarise_all(list(mean = mean)) ##Applies the function mean() to all variables in the table
 
-
+write.table(Averages_Data_Set, file = "C:/Users/ee60700/Documents/Coursera/Getting and Cleaning Data/UCI HAR Dataset/Average_Final_Output.txt", row.names = F)
                   
